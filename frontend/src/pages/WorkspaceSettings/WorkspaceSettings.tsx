@@ -13,7 +13,6 @@ import {
 } from '@highlight-run/ui/components'
 import { Authorization } from '@util/authorization/authorization'
 
-import { AutoJoinForm } from '@/pages/WorkspaceTeam/components/AutoJoinForm'
 import {
 	AutoJoinCheckboxProps,
 	AutoJoinTooltipProps,
@@ -28,7 +27,6 @@ import {
 	FormElementProps,
 	FormInputProps,
 } from './FieldsForm/BaseFieldsForm'
-import { FieldsForm as OtherForm } from './FieldsForm/FieldsForm'
 import styles from './WorkspaceSettings.module.css'
 
 const WorkspaceSettings = () => {
@@ -100,9 +98,6 @@ const WorkspaceSettings = () => {
 					<FieldsBox id="workspace">
 						<FieldsForm />
 					</FieldsBox>
-					<FieldsBox id="workspace-2">
-						<OtherForm />
-					</FieldsBox>
 					<FieldsBox id="autojoin">
 						<h3>Auto Join</h3>
 						<p>
@@ -126,28 +121,6 @@ const WorkspaceSettings = () => {
 								checkbox={autoJoinSwitch}
 								tooltip={autoJoinTooltip}
 							/>
-						</Authorization>
-					</FieldsBox>
-					<FieldsBox id="autojoin">
-						<h3>Auto Join</h3>
-						<p>
-							Enable auto join to allow anyone with an approved
-							email origin join.
-						</p>
-						<Authorization
-							allowedRoles={[AdminRole.Admin]}
-							forbiddenFallback={
-								<Callout
-									kind="warning"
-									title="You don't have access to auto-access domains."
-								>
-									You don't have permission to configure
-									auto-access domains. Please contact a
-									workspace admin to make changes.
-								</Callout>
-							}
-						>
-							<AutoJoinForm />
 						</Authorization>
 					</FieldsBox>
 				</div>
