@@ -1,7 +1,7 @@
 import Input from '@components/Input/Input'
 
 import Button from '../../../components/Button/Button/Button'
-import { CircularSpinner } from '../../../components/Loading/Loading'
+import { IconAnimatedLoading } from '../../../components/Loading/Loading'
 import {
 	BaseFieldsForm,
 	FormButtonProps,
@@ -26,7 +26,7 @@ export const FieldsForm = () => {
 			{...props}
 		>
 			{isSubmitting ? (
-				<CircularSpinner
+				<IconAnimatedLoading
 					style={{
 						fontSize: 18,
 						color: 'var(--text-primary-inverted)',

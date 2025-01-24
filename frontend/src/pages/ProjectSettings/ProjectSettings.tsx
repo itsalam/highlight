@@ -19,7 +19,7 @@ import { useNavigate } from 'react-router-dom'
 import BorderBox from '@/components/BorderBox/BorderBox'
 import { Button } from '@/components/Button'
 import {
-	CircularSpinner,
+	IconAnimatedLoading,
 	LoadingRightPanel,
 } from '@/components/Loading/Loading'
 import {
@@ -171,7 +171,7 @@ const ProjectSettings = () => {
 												trackingId="ProjectSettingsUpdate"
 											>
 												{editProjectSettingsLoading ? (
-													<CircularSpinner
+													<IconAnimatedLoading
 														style={{
 															fontSize: 18,
 															color: 'var(--text-primary-inverted)',
@@ -210,7 +210,7 @@ const ProjectSettings = () => {
 												trackingId="ProjectSettingsUpdate"
 											>
 												{editProjectSettingsLoading ? (
-													<CircularSpinner
+													<IconAnimatedLoading
 														style={{
 															fontSize: 18,
 															color: 'var(--text-primary-inverted)',
